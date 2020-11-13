@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Row , Col} from 'react-bootstrap';
+import {Row , Col} from 'react-bootstrap';
 import TextBox from '../TextBox/TextBox'
 import UCPButton from '../Buttons/UCPButton';
 import {isMobile} from 'react-device-detect';
@@ -84,7 +84,6 @@ export default class LoginForm extends React.Component {
                     <Col>
                     <div className="UserInfo">
                         <h2>Login</h2>
-                        <h3>{className}</h3>
                     </div>
                     </Col>
                 </Row>

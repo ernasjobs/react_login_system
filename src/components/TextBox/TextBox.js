@@ -1,17 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import './TextBox.css'
 import PropTypes from 'prop-types';
+import {isMobile} from 'react-device-detect';
 
 const TextBox = ({backgroundColor, name, title, size, id, maxLength, minLength, placeholder, type, onChange, ...props}) => {
-    const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
-    useEffect(() => {
-        window.addEventListener("resize", () => {
-            const ismobile = window.innerWidth < 768;
-            if (ismobile !== isMobile) setIsMobile(ismobile);
-        }, false);
-    }, [isMobile]);
+    const className = isMobile ? "mobiletextbox" : "textbox";
 return (
-    <div className={`${isMobile ? "mobiletextbox" : "textbox"}`}>
+    
+    <div className={`${className ? "mobiletextbox" : "textbox"}`}>
         <label htmlFor={id}>{title}</label>
         <input
         name={name}
