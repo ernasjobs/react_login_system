@@ -2,14 +2,15 @@ import React from 'react';
 import { Container, Row , Col} from 'react-bootstrap';
 import TextBox from '../TextBox/TextBox'
 import UCPButton from '../Buttons/UCPButton';
+import {isMobile} from 'react-device-detect';
 import './Login.css';
 
 const initialState = {
     username: "",
     password: "",
     usernameError: "",
-    passwordError: "",
-    isMobile: false
+    passwordError: ""
+    
     
 };
 
@@ -34,13 +35,6 @@ export default class LoginForm extends React.Component {
             this.setState(initialState);
         }
     };
-    componentDidMount() {
-        window.addEventListener('resize', () => {
-            this.setState({
-                isMobile: window.innerWidth < 768
-            });
-        }, true);
-    }
     validateEmail(email){
         const pattern = /[a-zA-Z0-9]+[.]?([a-zA-Z0-9]+)?[@][a-z]{3,9}[.][a-z]{2,5}/;
         const result = pattern.test(email);
@@ -82,14 +76,15 @@ export default class LoginForm extends React.Component {
      this.setState(initialState);
     };
     render() {
-        const className = this.state.isMobile ? "MobileContainerStyle" : "ContainerStyle";
+        const className = isMobile ? "MobileContainerStyle" : "ContainerStyle";
         return(
-            <Container className={className}>
+            <div className={className}>
                 <form>
                 <Row>
                     <Col>
                     <div className="UserInfo">
                         <h2>Login</h2>
+                        <h3>{className}</h3>
                     </div>
                     </Col>
                 </Row>
@@ -125,7 +120,7 @@ export default class LoginForm extends React.Component {
                         />
                     </div>
                 </form>
-            </Container>
+            </div>
             );
         }
     }
