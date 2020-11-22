@@ -1,8 +1,11 @@
 import React from 'react'
 import Select from 'react-select'
 import './DropdownMenu.css';
+import {isMobile} from 'react-device-detect';
+const className = isMobile ? "MobileDropdown" : "Dropdown";
 const DropdownMenu = ({options,placeholder,styles, ...props}) => (
-  <Select className="Dropdown" options={options} placeholder={placeholder}/>
+  
+  <Select className={className} options={options} placeholder={placeholder}/>
 )
 
 export default DropdownMenu;
