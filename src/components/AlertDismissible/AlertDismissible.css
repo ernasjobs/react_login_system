@@ -1,0 +1,28 @@
+.Alert
+{
+    background-color: #F08575;
+    color: white;
+    padding: 15px !important;
+}
+.close
+{
+    float: right;
+    background-color: white;
+    color: red;
+    border-color: white;
+}
+.alert-heading
+{
+    text-align: center !important;
+    font-size: 14px;
+    font-weight: bolder;
+}
+.sr-only
+{
+    display: none;
+}
+.aria-hidden
+{
+    background-color: white;
+    color: red;
+}
