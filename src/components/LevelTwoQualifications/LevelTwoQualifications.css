@@ -28,7 +28,12 @@
     text-align: center !important;
     max-width: 40% !important;
 }
-
+.mobile-form-right {
+    position: relative;
+    left: 10%;
+    text-align: center !important;
+    max-width: 60% !important;
+}
 .MobileTextArea
 {
     max-width: 120px;

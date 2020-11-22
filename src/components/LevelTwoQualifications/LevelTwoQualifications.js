@@ -76,13 +76,14 @@ const LevelTwoQualifications = (props) => {
     }
   }
   const className = isMobile ? "MobileTextArea" : "DesktopTextArea";  
+  const className1 = isMobile ? "mobile-form-right" : "form-right";
   return (
   
     <div className="form-container">
       <div className="form-background">
         <h3 className="form-title">Applicant Qualifications & Experience</h3>
         <AlerDismissible/>
-        <div class="form-right">
+        <div class={className1}>
           <p>GCSE English Language</p>
           <DropdownMenu placeholder="Select Grade" options={gsceGrades} />
           <p>GCSE English Literature</p>
