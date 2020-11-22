@@ -31,5 +31,6 @@
 
 .MobileTextArea
 {
-    max-width: 200px;
+    max-width: 160px;
+    margin-right: 20px;
 }
