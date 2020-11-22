@@ -78,7 +78,7 @@ const LevelTwoQualifications = (props) => {
   const className = isMobile ? "MobileTextArea" : "DesktopTextArea";  
   return (
   
-    <Container className="form-container">
+    <div className="form-container">
       <div className="form-background">
         <h3 className="form-title">Applicant Qualifications & Experience</h3>
         <AlerDismissible/>
@@ -96,7 +96,7 @@ const LevelTwoQualifications = (props) => {
         </div>
       </div>
       <div>{UserTypeSelect()}</div>
-    </Container>
+    </div>
   );
 };
 
