@@ -29,3 +29,7 @@
     max-width: 40% !important;
 }
 
+.MobileTextArea
+{
+    max-width: 200px;
+}

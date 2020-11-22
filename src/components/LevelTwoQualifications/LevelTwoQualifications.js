@@ -4,6 +4,7 @@ import "./LevelTwoQualifications.css";
 import { Container, Row, Col } from "react-bootstrap";
 import UCPButton from "../Buttons/UCPButton";
 import AlerDismissible from '../AlertDismissible/AlertDismissible';
+import {isMobile} from 'react-device-detect';
 const LevelTwoQualifications = (props) => {
   var gsceGrades = [
     { label: "A*", id: "a*", value: "A*" },
@@ -74,7 +75,9 @@ const LevelTwoQualifications = (props) => {
       );
     }
   }
+  const className = isMobile ? "MobileTextArea" : "DesktopTextArea";  
   return (
+  
     <Container className="form-container">
       <div className="form-background">
         <h3 className="form-title">Applicant Qualifications & Experience</h3>
@@ -89,7 +92,7 @@ const LevelTwoQualifications = (props) => {
           <p>GCSE Science / Additional Science</p>
           <DropdownMenu placeholder="Select Grade" options={gsceGrades} />
           <p>L2 Qualifications</p>
-          <textarea name="l2qualificaitons" placeholder="Enter level 2 qualifications"  rows={6} cols={45}/>
+          <textarea className = {className} name="l2qualificaitons" placeholder="Enter level 2 qualifications"  rows={6} cols={45}/>
         </div>
       </div>
       <div>{UserTypeSelect()}</div>
