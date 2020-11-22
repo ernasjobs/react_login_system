@@ -79,7 +79,7 @@ const LevelTwoQualifications = (props) => {
   const className1 = isMobile ? "mobile-form-right" : "form-right";
   return (
   
-    <div className="form-container">
+    <Container>
       <div className="form-background">
         <h3 className="form-title">Applicant Qualifications & Experience</h3>
         <AlerDismissible/>
@@ -97,7 +97,7 @@ const LevelTwoQualifications = (props) => {
         </div>
       </div>
       <div>{UserTypeSelect()}</div>
-    </div>
+    </Container>
   );
 };
 
