@@ -3,7 +3,7 @@ import './TextBox.css'
 import PropTypes from 'prop-types';
 import {isMobile} from 'react-device-detect';
 
-const TextBox = ({backgroundColor, name, title, size, id, maxLength, minLength, placeholder, type, onChange, ...props}) => {
+const TextBox = ({backgroundColor, name, title, size, id, maxLength, minLength, placeholder, type, onChange,value,clearInput, ...props}) => {
     const className = isMobile ? "mobiletextbox" : "textbox";
 return (
     
@@ -17,6 +17,7 @@ return (
         maxLength = {maxLength}
         minLength = {minLength}
         type={type}
+        value ={clearInput ? '': value}
         />
     </div>
 );

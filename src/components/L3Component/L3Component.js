@@ -1,0 +1,79 @@
+import React from 'react';
+import './L3Component.css'
+import PropTypes from 'prop-types';
+import TextBox from '../TextBox/TextBox'
+const L3Component = ({ name, id, onChange,placeholder,value,clearInput, ...props }) => {
+    return (
+
+        <div className="l3component">
+            <p>Qualification : {"#"+id} </p>
+            <p>(E.g. A Level, BTEC, Access)</p>
+            <TextBox
+                id={"qualification" +id}
+                placeholder={"Enter qualification #"+id} 
+                value ={value} 
+                clearInput = {clearInput}
+                />
+            <p>Subject: (E.g. Bussiness Studies)</p>
+            <TextBox
+                id={"subject" +id}
+                placeholder={"Enter subject #" + id }
+                value ={value} 
+                clearInput = {clearInput}
+                />
+            <p>Grade Achieved</p>
+            <TextBox
+                id={"grade"+id}
+                placeholder={ "Enter grade #"+id}
+                value ={value} 
+                clearInput = {clearInput} />
+            <p>Year Achieved</p>
+            <TextBox
+                id={"year"+id}
+                type="date" 
+                value ={value} 
+                clearInput = {clearInput}
+                />
+        </div>
+
+    );
+};
+
+TextBox.propTypes = {
+    backgroundColor: PropTypes.string,
+    /** What background colour to use */
+    title: PropTypes.string,
+    /** Input contents */
+    size: PropTypes.oneOf(['small', 'medium', 'large']),
+    /** How large should the input be? */
+    maxLength: PropTypes.number,
+    //Maximum input length
+    minLength: PropTypes.number,
+    //Minimum input length
+    placeholder: PropTypes.string,
+    type: PropTypes.oneOf(['text', 'password', 'email', 'tel', 'number', 'date'])
+};
+
+TextBox.defaultProps = {
+    backgroundColor: null,
+    size: 'small',
+    maxLength: 30,
+    minLength: 0,
+    placeholder: '',
+    type: "text"
+};
+
+/* Example Use
+
+<TextBox 
+    title="First Name" 
+    placeholder="Enter your firstname" 
+    minLength="5" 
+    maxLength="30" 
+    id="input1" 
+    type="text" 
+/>
+
+*/
+
+export default L3Component;

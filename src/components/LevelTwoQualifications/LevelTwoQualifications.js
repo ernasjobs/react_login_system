@@ -1,7 +1,7 @@
 import React from "react";
 import DropdownMenu from "../DropdownMenu/DropdownMenu";
 import "./LevelTwoQualifications.css";
-import { Container, Row, Col } from "react-bootstrap";
+import {Row, Col } from "react-bootstrap";
 import UCPButton from "../Buttons/UCPButton";
 import AlerDismissible from '../AlertDismissible/AlertDismissible';
 import {isMobile} from 'react-device-detect';
