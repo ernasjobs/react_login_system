@@ -26,6 +26,7 @@
     padding: 5px;
     border: 2px solid black;
     margin-left: 3%;
+    width: 100px;
 }
 
 .mobiletextbox input:focus {
