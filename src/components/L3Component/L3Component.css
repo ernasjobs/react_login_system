@@ -22,4 +22,5 @@ l3component p
 { 
     font-size: 12 px;   
     margin-right: 50px; 
+    text-align: center !important;
 }
