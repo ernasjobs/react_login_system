@@ -36,9 +36,9 @@
 }
 .mobile-form-right {
     position: relative;
-    
+    right: 20%;
     text-align: center !important;
-    max-width: 60% !important;
+    max-width: 70% !important;
 }
 .MobileTextArea
 {
