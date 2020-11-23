@@ -21,8 +21,8 @@ l3component p
 .mobilel3component
 { 
     font-size: 10px;
-    color: rgb(209, 50, 50);
+    
     text-align: center !important;
     max-width: 80% !important;
-    right: 200px !important;
+    left: 200px !important;
 }
