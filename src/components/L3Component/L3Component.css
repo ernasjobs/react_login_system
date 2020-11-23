@@ -24,3 +24,7 @@ l3component p
     text-align: center !important;
     
 }
+.mobilel3component TextBox
+{
+    margin-right: 100px !important;
+}
