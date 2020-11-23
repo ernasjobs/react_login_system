@@ -18,3 +18,9 @@ l3component p
 {
     margin-bottom: 5px;
 }
+.mobilel3component
+{
+    font-size: 10px;
+    text-align: center !important;
+    max-width: 60% !important;
+}
