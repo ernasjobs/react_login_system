@@ -9,7 +9,7 @@ function App() {
   return (
     <Container>
       <Headers/>
-      <LevelThreeQualifications/>
+      <LevelTwoQualifications/>
     </Container>
   );
 }
