@@ -10,7 +10,7 @@ const L3Component = ({ name, id, onChange,placeholder,value,clearInput, ...props
             <p>Qualification : {"#"+id} </p>
             <p>(E.g. A Level, BTEC, Access)</p>
             <TextBox
-                className={className1}
+            
                 id={"qualification" +id}
                 placeholder={"Enter qualification #"+id} 
                 value ={value} 
