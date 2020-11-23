@@ -28,7 +28,7 @@ const LevelThreeQualifications = () => {
     
     <div className={className2}>
       <div className="form-background">
-        <h3 className="form-title">Level 3 Qualifications?</h3>
+        <h3 className="form-title">Level 3 Qualifications</h3>
         {counter < 6 ?
           <div className={className1}>
             <L3Component id={counter} clearInput= {clearInput}  />
