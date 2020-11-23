@@ -6,7 +6,7 @@ import {isMobile} from 'react-device-detect';
 const L3Component = ({ name, id, onChange,placeholder,value,clearInput, ...props }) => {
     const className1 = isMobile ? "mobilel3component" : "l3component";
     return (
-        <div className={className1}>
+        <div className="l3component">
             <p>Qualification : {"#"+id} </p>
             <p>(E.g. A Level, BTEC, Access)</p>
             <TextBox
