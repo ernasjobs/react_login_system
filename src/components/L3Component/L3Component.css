@@ -20,5 +20,6 @@ l3component p
 }
 .mobilel3component
 { 
-    font-size: 12 px;    
+    font-size: 12 px;   
+    margin-right: 50px; 
 }
