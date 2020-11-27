@@ -1,9 +1,19 @@
-import React from 'react';
 import './TextBox.css'
+import React, { useState} from "react";
 import PropTypes from 'prop-types';
 import {isMobile} from 'react-device-detect';
 
-const TextBox = ({backgroundColor, name, title, size, id, maxLength, minLength, placeholder, type, onChange,value,clearInput, ...props}) => {
+const TextBox = ({backgroundColor, name,key, title, size, id, maxLength, minLength, placeholder, type,value:initialValue,clearInput, ...props}) => {
+    const[emptyInput, setEmptyInput] = useState(clearInput)
+    const [input, setInput] = useState('');
+    const handleChange = (e) => {
+        if (emptyInput) {setEmptyInput(false)}
+        setInput(e.currentTarget.value);
+        console.log(input);  
+    };
+    const clearInputField = (e) => {
+        setEmptyInput(!clearInput)
+    };
     const className = isMobile ? "mobiletextbox" : "textbox";
 return (
     
@@ -11,13 +21,16 @@ return (
         <label htmlFor={id}>{title}</label>
         <input
         name={name}
-        onChange={onChange}
+        key = {key}
         placeholder={placeholder}
         id= {id}
         maxLength = {maxLength}
         minLength = {minLength}
         type={type}
-        value ={clearInput ? '': value}
+        value ={emptyInput ? '': input}
+        onChange = {handleChange}
+        clearInput = {clearInputField}
+       
         />
     </div>
 );

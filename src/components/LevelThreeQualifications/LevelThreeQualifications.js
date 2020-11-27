@@ -8,22 +8,23 @@ var l3QualificationsOptions = [
   { label: "No", id: "qualificationNo", value: "no" },
 ];
 const LevelThreeQualifications = () => {
-  const className2 = isMobile ? "mobile-form-container" : "form-container";
+  const className2 = isMobile ? "l3-mobile-form-container" : "l3-form-container";
   const [value, setValue] = useState("");
-  const [clearInput, setClearInput] =useState(false)
+  const [emptyInput, setClearInput] = useState(false);
   const [counter, setCounter] = useState(1);
   const handleChange = event => {
     console.log(event.target.value);
     if (event.target.value === 'no') {
       setCounter(6);
       setValue(event.target.value);
+      
     }
     else {
+      setClearInput(true);
       setCounter(counter + 1);
-      setClearInput(true)
     }
   }
-  const className1 = isMobile ? "mobile-form-right" : "form-right";
+  const className1 = isMobile ? "l3-mobile-form-right" : "l3-form-right";
   return (
     
     <div className={className2}>
@@ -31,7 +32,7 @@ const LevelThreeQualifications = () => {
         <h3 className="form-title">Level 3 Qualifications</h3>
         {counter < 6 ?
           <div className={className1}>
-            <L3Component id={counter} clearInput= {clearInput}  />
+            <L3Component id={counter} clearInput= {emptyInput}  />
               <p>Other L3 Qualifications</p>
               <RadioButton
                 options={l3QualificationsOptions}

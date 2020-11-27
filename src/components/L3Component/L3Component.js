@@ -3,15 +3,16 @@ import './L3Component.css'
 import PropTypes from 'prop-types';
 import TextBox from '../TextBox/TextBox'
 import {isMobile} from 'react-device-detect';
-const L3Component = ({ name, id, onChange,placeholder,value,clearInput, ...props }) => {
+const L3Component = ({ name, id,key, onChange,placeholder,value,clearInput, ...props }) => {
     const className1 = isMobile ? "mobilel3component" : "l3component";
     return (
         <div className={className1}>
             <p>Qualification : {"#"+id} </p>
             <p>(E.g. A Level, BTEC, Access)</p>
             <TextBox
-            
-                id={"qualification" +id}
+            onChange = {onChange}    
+            id={"qualification" +id}
+            key = {"2000" + id}
                 placeholder={"Enter qualification #"+id} 
                 value ={value} 
                 clearInput = {clearInput}
@@ -19,6 +20,7 @@ const L3Component = ({ name, id, onChange,placeholder,value,clearInput, ...props
             <p>Subject: (E.g. Bussiness Studies)</p>
             <TextBox
                 id={"subject" +id}
+                key = {"3000" + id}
                 placeholder={"Enter subject #" + id }
                 value ={value} 
                 clearInput = {clearInput}
@@ -26,12 +28,14 @@ const L3Component = ({ name, id, onChange,placeholder,value,clearInput, ...props
             <p>Grade Achieved</p>
             <TextBox
                 id={"grade"+id}
+                key = {"4000" + id}
                 placeholder={ "Enter grade #"+id}
                 value ={value} 
                 clearInput = {clearInput} />
             <p>Year Achieved</p>
             <TextBox
                 id={"year"+id}
+                key = {"5000" + id}
                 type="date" 
                 value ={value} 
                 clearInput = {clearInput}
